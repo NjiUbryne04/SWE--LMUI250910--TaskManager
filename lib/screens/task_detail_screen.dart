@@ -23,7 +23,8 @@ class TaskDetailScreen extends StatefulWidget {
 }
 
 class _TaskDetailScreenState extends State<TaskDetailScreen> {
-  static const Color _primary = Color(0xFF00695C);
+  static const Color _primary = Color(0xFF2E6FD8); // steel blue
+  static const Color _navy   = Color(0xFF1A2E4A); // deep navy
 
   // Priority colour mapping
   Color get _priorityColor {
@@ -88,7 +89,7 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
         '${task.dueDate.day}/${task.dueDate.month}/${task.dueDate.year}';
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF4F6F8),
+      backgroundColor: const Color(0xFFEEF1F5),
       appBar: AppBar(
         title: const Text('Task Details'),
         actions: [
@@ -146,7 +147,7 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
                       style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
-                        color: _primary,
+                        color: _navy,
                         decoration: task.isCompleted
                             ? TextDecoration.lineThrough
                             : null,

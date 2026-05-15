@@ -17,25 +17,26 @@ class MyApp extends StatelessWidget {
       title: 'NUF Task Manager',
       debugShowCheckedModeBanner: false, // hides the red debug banner
 
-      // Custom theme — deep teal/green, NOT the default blue or indigo
+      // Custom theme — masculine navy + steel-blue palette
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF00695C), // deep teal
+          seedColor: const Color(0xFF2E6FD8), // steel blue accent
+          primary: const Color(0xFF1A2E4A),   // deep navy primary
         ),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFF00695C),
+          backgroundColor: Color(0xFF1A2E4A), // deep navy
           foregroundColor: Colors.white,
           elevation: 2,
           centerTitle: true,
         ),
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: Color(0xFF00695C),
+          backgroundColor: Color(0xFF2E6FD8), // steel blue
           foregroundColor: Colors.white,
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFF00695C),
+            backgroundColor: const Color(0xFF2E6FD8), // steel blue
             foregroundColor: Colors.white,
             padding: const EdgeInsets.symmetric(vertical: 14),
             shape: RoundedRectangleBorder(
@@ -44,7 +45,9 @@ class MyApp extends StatelessWidget {
           ),
         ),
         cardTheme: CardThemeData(
-          elevation: 3,
+          color: Colors.white,
+          elevation: 2,
+          shadowColor: const Color(0xFF1A2E4A).withValues(alpha: 0.08),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
@@ -52,6 +55,10 @@ class MyApp extends StatelessWidget {
         ),
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: const BorderSide(color: Color(0xFF2E6FD8), width: 2),
+          ),
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
         ),
@@ -86,7 +93,7 @@ class _MainScreenState extends State<MainScreen> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) => setState(() => _currentIndex = index),
-        selectedItemColor: const Color(0xFF00695C),
+        selectedItemColor: const Color(0xFF2E6FD8), // steel blue
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,

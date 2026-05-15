@@ -15,7 +15,8 @@ class TaskCard extends StatelessWidget {
     required this.onTap,
   });
 
-  static const Color _primary = Color(0xFF00695C);
+  static const Color _primary = Color(0xFF2E6FD8); // steel blue
+  static const Color _navy   = Color(0xFF1A2E4A); // deep navy
 
   // Returns a colour based on priority level
   Color get _priorityColor {
@@ -134,7 +135,7 @@ class TaskCard extends StatelessWidget {
                               : Icons.calendar_today,
                           label:
                               '${task.dueDate.day}/${task.dueDate.month}/${task.dueDate.year}',
-                          color: _isOverdue ? Colors.red : Colors.blueGrey,
+                          color: _isOverdue ? Colors.red : _navy,
                         ),
                       ],
                     ),

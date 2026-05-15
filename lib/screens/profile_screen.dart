@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
-  static const Color _primary = Color(0xFF00695C);
+  static const Color _primary = Color(0xFF2E6FD8); // steel blue
+  static const Color _navy   = Color(0xFF1A2E4A); // deep navy
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Text('My Profile')),
-      backgroundColor: const Color(0xFFF4F6F8),
+      backgroundColor: const Color(0xFFEEF1F5),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -32,7 +33,7 @@ class ProfileScreen extends StatelessWidget {
                     // CircleAvatar shows student initials
                     const CircleAvatar(
                       radius: 48,
-                      backgroundColor: _primary,
+                      backgroundColor: Color(0xFF1A2E4A), // navy avatar
                       child: Text(
                         'NUF',
                         style: TextStyle(
@@ -53,7 +54,7 @@ class ProfileScreen extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
-                              color: _primary,
+                              color: Color(0xFF1A2E4A), // navy name
                             ),
                           ),
                           const SizedBox(height: 6),
